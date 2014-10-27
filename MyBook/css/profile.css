@@ -1,0 +1,93 @@
+html, body {
+    background-color: rgb(231, 231, 115);
+}
+
+@font-face {
+    font-family: 'icons';
+    src: url('icons.ttf')  format('truetype');
+}
+
+input {
+    box-sizing: border-box;
+	border-radius:6px;
+	height:30px;
+	width:190px;
+	background-color: white;
+}
+.user{
+	margin-left:450px;
+}
+
+.header {
+    color:white;
+    padding: 10px;
+	background: rgba(30, 110, 168, 0.77);
+	font-size: 24px;
+	font-family: "Times New Roman", Georgia, Serif;
+	height: 100px;
+    width: 100%;
+}
+
+.footer {
+	background-color:rgba(30, 110, 168, 0.77);
+    color:white;
+    clear:both;
+    text-align:center;
+	padding:15px;
+	width: 100%;
+	margin-top:	620px;
+}
+
+
+.form {
+	font-size: 24px;
+	color: white;
+	font-family: "Times New Roman", Georgia, Serif;
+}
+
+.btn {
+	width:100px;
+	height:30px;
+	border:none;
+	border-radius:6px;
+	background: url("../img/login1.png");
+	margin-left:850px;
+}
+
+.logo{
+	width: 150px;
+	height: 100px;
+	background-image:url("../img/mybook.jpg");
+}
+
+.head{
+	margin-left:180px;
+	margin-top:-60px;
+}
+
+#nav {
+    line-height:30px;
+    background-color:  #C2BD9A;
+    height:680px;
+	width:100px;
+    float:left;
+    padding:5px;	      
+}
+#section {
+	margin-top:40px;
+    text-align:center;	 	 
+}
+
+p {
+	padding: 20px 10px 0px 20px;
+	font-size:16px;
+	font-family: "Times New Roman", Georgia, Serif;
+}
+
+.feedblock{
+	display: block;
+}
+
+.feednone{
+	display: none;
+}

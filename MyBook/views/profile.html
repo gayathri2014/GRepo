@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/profile.css" />
+	<script type="text/javascript" src="../js/profile.js"></script>
+</head>
+
+<body>
+	<div class="header">
+		<form action="../index.html" method="post" name="form" >
+			<div class="logo"></div>
+			<div class="container head">
+				<label><strong>My Book</strong></label>
+				<button type="submit" class="btn">Logout</button>
+			</div>
+		</form>
+	</div> <!-- .header -->
+	<div id="nav">
+		<a href="feed.html">Feed</a><br>
+		<a href="profile.html">Profile</a><br>
+	</div>
+	
+	<div id = "image1">
+		<img id="previewField" src="../img/no-image.png" alt="your image" style="width:152px;height:229px"/>
+	</div>
+
+	<div id="section">
+	<div>
+		<input type = "text" id="name" placeholder = "Name"/>
+	</div>
+	<br>
+	<div>
+		<input type = "text" id="age" placeholder = "Age"/>
+	</div>
+	<br>
+	<div>
+		<input type = "text" id="phone" placeholder = "Phone"/>
+	</div>
+	<br>
+	<div>
+		<input type = "text" id="email" placeholder = "Email"/>
+	</div>
+	<br>
+	<div>
+		<textarea rows="8" cols="22" placeholder = "Address" id="address"></textarea>
+	</div>
+	<br>
+	<div>
+		<input type = "text" id="imageName" placeholder = "Profile image" readonly="readonly" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="file" id="imageFile" name="imageFile" accept="image/*" onchange="preview(this)"/>
+	</div>
+	<br>
+	<div>
+		<input type = "button" value = "Save" onclick = "save()"/>
+	</div>
+	</div>
+
+<br>
+<br>
+<br>
+	<div class="footer">
+		Talent Improving exercise, OFS
+	</div>
+
+</body>
+</html>

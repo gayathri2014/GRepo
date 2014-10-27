@@ -1,0 +1,132 @@
+html, body {
+    background-color: rgb(231, 231, 115);
+}
+
+@font-face {
+    font-family: 'icons';
+    src: url('icons.ttf')  format('truetype');
+}
+
+input {
+    box-sizing: border-box;
+	border-radius:6px;
+	height:30px;
+	width:190px;
+	background-color: white;
+}
+.user{
+	margin-left:450px;
+}
+
+.header {
+    color:white;
+    padding: 10px;
+	background: rgba(30, 110, 168, 0.77);
+	font-size: 24px;
+	font-family: "Times New Roman", Georgia, Serif;
+	height: 100px;
+    width: 100%;
+}
+
+.footer {
+	background-color:rgba(30, 110, 168, 0.77);
+    color:white;
+    clear:both;
+    text-align:center;
+	padding:15px;
+	width: 100%;
+	margin-top:	650px;
+}
+
+
+.form {
+	font-size: 24px;
+	color: white;
+	font-family: "Times New Roman", Georgia, Serif;
+}
+
+.btn {
+	width:100px;
+	height:30px;
+	border:none;
+	border-radius:6px;
+	background: url("../img/login1.png");
+	margin-left:850px;
+}
+
+.logo{
+	width: 150px;
+	height: 100px;
+	background-image:url("../img/mybook.jpg");
+}
+
+.head{
+	margin-left:180px;
+	margin-top:-60px;
+}
+
+#nav {
+    line-height:30px;
+    background-color:  #C2BD9A;
+    height:720px;
+	width:100px;
+    float:left;
+    padding:5px;	      
+}
+#section {
+	margin-top:40px;
+    text-align:center;	 	 
+}
+
+p {
+	padding: 20px 10px 0px 20px;
+	font-size:16px;
+	font-family: "Times New Roman", Georgia, Serif;
+}
+
+.postbtn {
+	width:100px;
+	height:30px;
+	border:none;
+	border-radius:6px;
+	background-color:rgba(30, 110, 168, 0.77);
+}
+
+#image1{
+	line-height:30px;
+	height:152px;
+    width:299px;
+    float:right;
+    padding:5px;
+}
+#image2{
+	line-height:30px;
+	height:75px;
+    float:left;
+    padding:5px;
+}
+#img1{
+    float:left;
+}
+#txt{
+	font-family: "Times New Roman", Times, serif;
+	 font-size: 30px;
+}
+#but {
+
+    display:block;
+	position: relative;
+    float:right;
+    width:32px;
+    height:32px;
+	bottom: 25px;
+	right: 150px;
+	background-image: url(../img/close.jpg);
+	background-repeat:no-repeat;
+}
+#loadFeeds{
+	margin-top:15px;
+}
+#feedDiv{ }
+#feedDiv:nth-child(even) {background: #92D2F0}
+#feedDiv:nth-child(odd) {background: #C6F3F5}
