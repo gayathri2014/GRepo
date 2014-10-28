@@ -19,42 +19,42 @@
 	</div> <!-- .header -->
 	<div id="nav">
 		<a href="feed.html">Feed</a><br>
-		<a href="profile.html">Profile</a><br>
+		<a href="profile.html" style="background: rgb(176, 211, 229)">Profile</a><br>
 	</div>
 	
 	<div id = "image1">
-		<img id="previewField" src="../img/no-image.png" alt="your image" style="width:152px;height:229px"/>
+		<img id="previewField" src="../img/no-image.jpg" alt="your image" style="width:152px;height:229px"/>
 	</div>
 
 	<div id="section">
-	<div>
-		<input type = "text" id="name" placeholder = "Name"/>
-	</div>
-	<br>
-	<div>
-		<input type = "text" id="age" placeholder = "Age"/>
-	</div>
-	<br>
-	<div>
-		<input type = "text" id="phone" placeholder = "Phone"/>
-	</div>
-	<br>
-	<div>
-		<input type = "text" id="email" placeholder = "Email"/>
-	</div>
-	<br>
-	<div>
-		<textarea rows="8" cols="22" placeholder = "Address" id="address"></textarea>
-	</div>
-	<br>
-	<div>
-		<input type = "text" id="imageName" placeholder = "Profile image" readonly="readonly" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<input type="file" id="imageFile" name="imageFile" accept="image/*" onchange="preview(this)"/>
-	</div>
-	<br>
-	<div>
-		<input type = "button" value = "Save" onclick = "save()"/>
-	</div>
+		<div>
+			<input type = "text" id="name" placeholder = "Name"/>
+		</div>
+		<br>
+		<div>
+			<input type = "text" id="age" placeholder = "Age"/>
+		</div>
+		<br>
+		<div>
+			<input type = "text" id="phone" placeholder = "Phone"/>
+		</div>
+		<br>
+		<div>
+			<input type = "text" id="email" placeholder = "Email"/>
+		</div>
+		<br>
+		<div>
+			<textarea rows="8" cols="22" placeholder = "Address" id="address" style="margin-left: -380px;"></textarea>
+		</div>
+		<br>
+		<div>
+			<input type = "text" id="imageName" placeholder = "Profile image" readonly="readonly" style="margin-left: -155px;"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="file" id="imageFile" name="imageFile" accept="image/*" onchange="preview(this)"/>
+		</div>
+		<br>
+		<div>
+			<input type = "button" value = "Save" onclick = "save()" style="margin-left: -370px;"/>
+		</div>
 	</div>
 
 <br>

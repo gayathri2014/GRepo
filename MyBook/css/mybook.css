@@ -1,5 +1,5 @@
 html, body {
-    background-color: rgb(231, 231, 115);
+    background-color: rgb(245, 249, 192);
     height: 100%;
 }
 
@@ -13,7 +13,7 @@ input {
 	border-radius:6px;
 	height:30px;
 	width:190px;
-	background-color: rgb(231, 231, 115);
+	background-color: rgb(245, 249, 192);
 }
 .user{
 	margin-left:450px;
@@ -36,7 +36,7 @@ input {
     text-align:center;
 	padding:15px;
 	width: 100%;
-	margin-top:	730px;
+	/* margin-top:	730px; */
 }
 
 .form {
@@ -50,7 +50,8 @@ input {
 	height:30px;
 	border:none;
 	border-radius:6px;
-	background: url("../img/login1.png");
+	background-color: rgb(230, 232, 187);
+	font-weight: bolder;
 }
 
 .logo{

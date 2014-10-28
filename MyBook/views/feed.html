@@ -17,13 +17,13 @@
 	</div> <!-- .header -->
 	
 	<div id="nav">
-		<p><a href="feed.html">Feed</a></p><br>
-		<p><a href="profile.html">Profile</a></p><br>
+		<a href="feed.html" style="background: rgb(176, 211, 229)">Feed</a><br>
+		<a href="profile.html">Profile</a><br>
 	</div>
 
 	<div id="section">
-		<input id = "msg" value = "" type = "text"/>
-		<button class="postbtn" onclick="createFeeds('msg')"> Post</button>
+		<input id = "feedId" value = "" type = "text"/>
+		<button class="postbtn" onclick="createFeed('feedId')"> Post</button>
 		<div id="loadFeeds" class = "feedlist"></div>
 	</div>
 	

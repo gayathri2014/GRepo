@@ -30,55 +30,61 @@ URLFeed.prototype.getFeed = function(){
 	return this.url;
 }
 /*---------create a feed----------------*/
-var feedx = [];
-function createFeeds(id){	
-	var ele = document.getElementById(id).value;
+var feedNew = [];
+function createFeed(id){	
+	var feedValue = document.getElementById(id).value;
 	document.getElementById(id).value = "";	
 	var feed;
-	if(ele.length > 4 && (ele.substring(0,4).toUpperCase() == "HTTP" || ele.substring(0,3).toUpperCase() == "WWW")){
-		if(ele.substring(0,3).toUpperCase() == "WWW") {
-			ele ="http://"+ele;
+	if(feedValue.length > 4 && (feedValue.substring(0,4).toUpperCase() == "HTTP" || feedValue.substring(0,3).toUpperCase() == "WWW")){
+		if(feedValue.substring(0,3).toUpperCase() == "WWW") {
+			feedValue ="http://"+feedValue;
 		}
-		feed = new URLFeed(1,ele);
+		feed = new URLFeed(1,feedValue);
 	} else {
-		feed = new TextFeed(1,ele);
+		feed = new TextFeed(1,feedValue);
 	}
-	createFeedsService(feed);
+	if (feedValue.length>0){
+		AddFeedService(feed);
+	} else {
+		alert('Please enter the Feed');
+	}
 }
 /*--------------------Delete a Feed -----------------*/
 function deleteFeeds(id){	
-	deleteFeedsService(id);
+	deleteFeedService(id);
 }
-var createFeedsService = service("CreateFeed");
-var deleteFeedsService = service("DeleteFeed");
+/*Returning Functions and Immediate Invocation*/
+var AddFeedService = service("AddFeed");  
+var deleteFeedService = service("DeleteFeed");
+
 function User(userName){
 	this.feeds = [];
 }
 
-function service(type){
-	var currentUser=new User("Gayathri");
-	var feeds = currentUser.feeds;
-	var ret;
+function service(mode){
+	var currentUser = new User("Gayathri");
+	var feedsArray = currentUser.feeds;
+	var result;
 	
-	if(type === "CreateFeed"){	
-		ret =  function(feed){
-			feeds.push(feed);			
-			reloadFeeds(feeds);
+	if(mode === "AddFeed"){	
+		result = function(feed){
+			feedsArray.push(feed);			
+			reloadFeeds(feedsArray);
 		};
-	} else if (type === "DeleteFeed"){
-			ret =  function(id){
-			feeds=feedx;
-			console.log(feeds);
-			feeds.splice(id,1);	
-			console.log(feeds);
-			var myNode = document.getElementById("loadFeeds");
-			while (myNode.firstChild) {
-				myNode.removeChild(myNode.firstChild);
+	} else if (mode === "DeleteFeed"){
+		result = function(id){
+			feedsArray=feedNew;
+			console.log(feedsArray); 
+			feedsArray.splice(id,1);	
+			console.log(feedsArray);
+			var myfeed = document.getElementById("loadFeeds");
+			while (myfeed.firstChild) {
+				myfeed.removeChild(myfeed.firstChild);
 			}			
-			reloadFeeds(feeds);
+			reloadFeeds(feedsArray);
 		};
 	} 
-	return ret;
+	return result;
 }
 /**********************************************************/
 
@@ -88,12 +94,10 @@ function reloadFeeds(feedsArray){
 		element.removeChild(element.firstChild);
 	}	
 	var feeds = feedsArray;	
-	feedx=feeds;
+	feedNew=feeds;
 	var div = document.createElement("div");	
-	var emptyRow,emptyColumn,userFeed,userFeedText,userFeedDelete,userFeedDate,img,node,input,node1,index,userIcon;
+	var userFeed,userFeedText,userFeedDelete,userFeedDate,img,node,input,node1,index,userIcon;
 		for(var i=0,l=feeds.length;i<l;i++){				
-			emptyRow = getElement("div","emptyRow");
-			emptyColumn = getElement("div","emptyColumn");
 			userFeed = getElement("div","userFeed");
 			userFeedText = getElement("div","UserFeedText");
 			userFeedDelete = getElement("div","UserFeedDelete");
@@ -124,9 +128,14 @@ function reloadFeeds(feedsArray){
 			userFeed.appendChild(userFeedText);
 			userFeed.appendChild(userFeedDelete);
 			userFeed.appendChild(userFeedDate);
-			div.appendChild(emptyRow);
-			div.appendChild(emptyColumn);
 			div.appendChild(userFeed);
+			
+			// var result = "<div class="userFeed" id="feedDiv">" +
+						// "<div class="userIcon" id="img1"> <img src="../img/dp.jpg" height="40px" width="40px"></div>" +
+						// "<div class="UserFeedText"><a id="txt">sdfsf</a></div>" +
+						// "<div class="UserFeedDelete"><input type="button" onclick="deleteFeeds(i)" id="but"></div>"+
+						// "<div class="UserFeedDate">10/28/2014 2:35 PM</div></div>"
+			// element.appendChild(result);
 		}
 	element.appendChild(div);
 }

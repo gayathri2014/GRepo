@@ -1,5 +1,5 @@
 html, body {
-    background-color: rgb(231, 231, 115);
+    background-color: rgb(245, 249, 192);
 }
 
 @font-face {
@@ -35,7 +35,7 @@ input {
     text-align:center;
 	padding:15px;
 	width: 100%;
-	margin-top:	620px;
+	/* margin-top:	620px; */
 }
 
 
@@ -50,8 +50,9 @@ input {
 	height:30px;
 	border:none;
 	border-radius:6px;
-	background: url("../img/login1.png");
+	background-color: rgb(230, 232, 187);
 	margin-left:850px;
+	font-weight: bolder;
 }
 
 .logo{
@@ -66,28 +67,29 @@ input {
 }
 
 #nav {
-    line-height:30px;
-    background-color:  #C2BD9A;
-    height:680px;
-	width:100px;
-    float:left;
-    padding:5px;	      
+	line-height: 60px;
+	background-color: #F8FCC9;
+	height: 720px;
+	width: 100px;
+	float: left;
+	padding: 5px; 
+	border: 1px solid lightgrey;	
 }
 #section {
 	margin-top:40px;
     text-align:center;	 	 
 }
 
-p {
-	padding: 20px 10px 0px 20px;
-	font-size:16px;
-	font-family: "Times New Roman", Georgia, Serif;
+#image1{
+	line-height:30px;
+	height:152px;
+    width:299px;
+    float:right;
+    padding:35px;
 }
-
-.feedblock{
-	display: block;
-}
-
-.feednone{
-	display: none;
+#image2{
+	line-height:30px;
+	height:75px;
+    float:left;
+    padding:5px;
 }
