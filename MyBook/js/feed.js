@@ -1,3 +1,5 @@
+
+/*------------ Feed function and its prototype------------*/
 function Feed(id,type){
 	this.id=id;;
 	this.type=type;	
@@ -14,6 +16,7 @@ function TextFeed(id,text){
 	this.text = text;
 	this.time= new Date();
 }
+
 TextFeed.prototype = Object.create(Feed.prototype);
 TextFeed.prototype.getFeed = function(){
 	return this.text;
@@ -26,6 +29,7 @@ URLFeed.prototype = Object.create(Feed.prototype);
 URLFeed.prototype.getFeed = function(){
 	return this.url;
 }
+/*---------create a feed----------------*/
 var feedx = [];
 function createFeeds(id){	
 	var ele = document.getElementById(id).value;
@@ -41,7 +45,7 @@ function createFeeds(id){
 	}
 	createFeedsService(feed);
 }
-
+/*--------------------Delete a Feed -----------------*/
 function deleteFeeds(id){	
 	deleteFeedsService(id);
 }
