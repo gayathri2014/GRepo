@@ -31,7 +31,7 @@
 		this.profile.image = loginFactory.profileImage;
 		
 		this.validateProfile = function() {			
-			Login.profileImage = this.profile.image;
+			loginFactory.profileImage = this.profile.image;
 			this.profileSaved = true;
 		};
 	}]);	
